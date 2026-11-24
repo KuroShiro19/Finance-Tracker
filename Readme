@@ -1,0 +1,13 @@
+##This is my first project back
+
+Problem Statement: 
+    I want a application to keep track of all my trading and investments
+    at a glance
+
+Libraries used:
+    pandas (For working with labeled data efficiently)
+    yfinance (For financial and market data from Yahoo Finance)
+    streamlit (Turns python scripts into interactive webapps)
+    numpy (For mathematical functions)
+    scipy (For scientific and numerical computation tools)
+##
