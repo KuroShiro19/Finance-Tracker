@@ -22,6 +22,7 @@ def compute_positions(tx):
     df["avg_cost"] = df["cost"] / df["qty"].replace(0, float("nan"))
     df["realised_pnl"] = pd.Series(realised)
     return df[df["qty"] > 1e-9].join(df[["realised_pnl"]], rsuffix="_")
+# computes the current positions based on the transactions, calculating quantity, cost, average cost, and realised P&L for each symbol.
 
 def add_market_value(pos, prices):
     pos = pos.copy()
@@ -31,3 +32,4 @@ def add_market_value(pos, prices):
     pos["return_pct"] = pos["unrealised_pnl"] / pos["cost"] * 100
     pos["weight_pct"] = pos["market_value"] / pos["market_value"].sum() * 100
     return pos
+# adds market value, unrealised P&L, return percentage, and weight percentage to the positions DataFrame based on the latest prices.

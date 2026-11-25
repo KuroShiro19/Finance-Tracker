@@ -1,4 +1,4 @@
-##This is my first project back
+This is my first project back
 
 Problem Statement: 
     I want a application to keep track of all my trading and investments
@@ -10,4 +10,17 @@ Libraries used:
     streamlit (Turns python scripts into interactive webapps)
     numpy (For mathematical functions)
     scipy (For scientific and numerical computation tools)
-##
+
+db.py is to create the database in sqlite and store all the values needed that I want to track.
+
+prices.py uses the yfinance library to read Yahoo Finance financial data. (Hopes to be changed to TradingView or other platforms data in the future.)
+
+analytics.py for my functions to calculate/analyze the data I want to see. (Functions to be put in separate files in the future when more robust.)
+
+app.py is the main app body in which everything runs through using streamlit. (Hoping to be changed to using C, HTML, CSS, etc. for more robust website and better UX/UI in the future.)
+
+engine.py contains the portfolio's transactions and valuation calculations
+
+Run: streamlit run app.py
+
+25/11/2026: Transaction made into db, next step is to validate for ticker symbol as typing it incorrectly returns a ValueError. Homework: Learn pandas and yfinance libraries
